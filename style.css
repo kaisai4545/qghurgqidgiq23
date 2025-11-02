@@ -1,0 +1,167 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+  font-family: -apple-system, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Noto Sans JP", Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
+  display: flex; /* 言語セレクターを上端に配置するために追加 */
+  flex-direction: column; /* 言語セレクターを上端に配置するために追加 */
+}
+
+/* 🌟 追加: 言語セレクター 🌟 */
+.lang-selector {
+  width: 100%;
+  text-align: center;
+  padding: 12px 0;
+}
+.lang-link {
+  font-size: 12px;
+  color: #8e8e8e;
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 20px;
+  flex-grow: 1; /* 言語セレクターの下で残りのスペースを使う */
+}
+/* 🌟 修正: ロゴの位置調整 🌟 */
+.top-space { 
+  height: 8vh; /* スペースを少し狭く */
+  display: none; /* Instagram風にするため、上下のpaddingで制御し、この要素は非表示に */
+}
+/* 🌟 修正: ロゴの大きさ 🌟 */
+.logo { 
+  width: 175px; /* ロゴの幅を大きく */
+  margin-bottom: 24px; /* 下のスペースを調整 */
+}
+
+/* 🌟 修正: フォームの幅を調整 🌟 */
+.form {
+  width: 100%;
+  max-width: 350px; /* フォーム全体の幅を調整 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0; /* フォームの上下にpaddingを追加し、Instagram風の箱を作る */
+  border: 1px solid #dbdbdb; /* Instagram風の薄い枠線を追加 */
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+/* フォーム内部の要素を幅広くするための調整 */
+.form .input, .form .btn-primary {
+  max-width: 300px; /* フォーム内部の要素の最大幅を設定 */
+}
+
+/* 🌟 修正: 入力フィールドのスタイル 🌟 */
+.input {
+  width: 100%;
+  height: 36px; /* 高さを低く */
+  padding: 9px 8px; /* 内側のpaddingを調整 */
+  margin: 4px 0; /* マージンを調整 */
+  border-radius: 3px; /* 角丸を小さく */
+  border: 1px solid #dbdbdb; /* 枠線を薄いグレーに */
+  font-size: 12px; /* フォントサイズを小さく */
+  outline: none;
+  background: #fafafa; /* 背景を薄いグレーに */
+}
+.input:focus {
+  border-color: #dbdbdb; /* フォーカス時の枠線は変わらないように */
+  box-shadow: none; /* フォーカス時のシャドウをなくす */
+  background: #ffffff; /* フォーカス時に背景を白に */
+}
+.btn {
+  font-size: 14px; /* フォントサイズを調整 */
+  border: none;
+  cursor: pointer;
+  border-radius: 8px; /* 角丸を小さく */
+  padding: 8px 16px; /* 内側のpaddingを調整 */
+}
+/* 🌟 修正: プライマリボタンのスタイル 🌟 */
+.btn-primary {
+  width: 100%;
+  max-width: 300px;
+  background: #0095f6; /* Instagramの青色に */
+  color: white;
+  margin-top: 8px; /* 上のマージンを調整 */
+  height: 36px; /* 高さを調整 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600; /* 太字に */
+}
+
+/* 🌟 修正: ヘルパーリンクのスタイル 🌟 */
+.helper {
+  margin-top: 16px; /* 上のマージンを調整 */
+  font-size: 12px;
+  color: #00376b; /* 濃い青色に */
+}
+.helper a {
+  color: #00376b;
+  text-decoration: none;
+}
+
+/* 🌟 追加: 「または」の区切り線 🌟 */
+.or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #8e8e8e;
+  font-size: 13px;
+  margin: 18px 0;
+  width: 100%;
+  max-width: 350px;
+}
+.or-divider::before, .or-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #dbdbdb;
+  margin: 0 10px;
+}
+
+/* 🌟 修正: アカウント作成ボタンのコンテナ 🌟 */
+.create-box {
+  width: 100%;
+  max-width: 350px;
+  margin-top: 0; /* マージンをリセット */
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  border: 1px solid #dbdbdb; /* 枠線を追加 */
+  background-color: #ffffff;
+}
+
+/* 🌟 修正: アウトラインボタンのスタイル 🌟 */
+.btn-outline {
+  width: auto; /* 幅を自動に */
+  max-width: none;
+  height: auto;
+  background: white;
+  border: none; /* 枠線をなくす */
+  color: #0095f6; /* プライマリカラーと同じ青に */
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600; /* 太字に */
+}
+
+.footer {
+  margin-top: 40px;
+  color: #8e8e8e; /* グレーの色を調整 */
+  font-size: 12px;
+}
+.brand {
+  font-weight: bold; /* ブランド名を太字に */
+}
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+/* レスポンシブ対応の調整は今回は省略し、モバイルファーストで調整 */
+/* @media (min-width: 768px) のセクションは削除または調整が必要です */

